@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{83F19DB6-6DFF-47E5-801D-1C5601F5906E}</ProjectGuid>
+    <ProjectGuid>{CB53E5F4-CE46-4507-84E6-A2775206C724}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>InfinityStore.Win</RootNamespace>
@@ -94,8 +94,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\InfinityStore.BL\InfinityStore.BL.csproj">
-      <Project>{c75a23a9-d1b3-43be-b3bb-7cc480edb815}</Project>
+    <ProjectReference Include="..\InfinityStoreBL\InfinityStore.BL.csproj">
+      <Project>{3c8339f7-9871-4d4d-a5bb-f68e31412c40}</Project>
       <Name>InfinityStore.BL</Name>
     </ProjectReference>
   </ItemGroup>
