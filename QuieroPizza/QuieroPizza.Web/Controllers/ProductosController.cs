@@ -12,7 +12,7 @@ namespace QuieroPizza.Web.Controllers
         // GET: Productos
         public ActionResult Index()
         {
-            var productosBL = new ProdustosBL();
+            var productosBL = new ProductosBL();
             var listadeProductos = productosBL.ObtenerProductos();
 
             return View(listadeProductos);

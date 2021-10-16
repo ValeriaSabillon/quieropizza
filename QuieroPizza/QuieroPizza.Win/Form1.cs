@@ -20,7 +20,7 @@ namespace QuieroPizza.Win
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var productosBL = new ProdustosBL();
+            var productosBL = new ProductosBL();
             var listadeProductos = productosBL.ObtenerProductos();
 
             foreach (var producto in listadeProductos)
