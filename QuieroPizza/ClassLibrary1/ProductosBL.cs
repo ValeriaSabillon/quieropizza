@@ -19,9 +19,8 @@ namespace QuieroPizza.BL
        
         public List<Producto> ObtenerProductos()
         {
-
             ListadeProductos = _contexto.Productos.ToList();
-            return _contexto.Productos.ToList();
+            return ListadeProductos;
         }
     }
 }

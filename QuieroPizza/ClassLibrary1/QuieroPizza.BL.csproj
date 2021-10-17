@@ -52,6 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\QuieroPizza.WebAdmi\Controllers\ProductosController.cs">
+      <Link>ProductosController.cs</Link>
+    </Compile>
+    <Compile Include="ActionResult.cs" />
     <Compile Include="Contexto.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="ProductosBL.cs" />

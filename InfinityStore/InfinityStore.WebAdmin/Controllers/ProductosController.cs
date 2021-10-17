@@ -10,10 +10,12 @@ namespace InfinityStore.WebAdmin.Content
     public class ProductosController : Controller
     {
         ProductosBL _productosBL;
+        CategoriaBL _categoriasBL;
 
         public ProductosController()
         {
             _productosBL = new ProductosBL();
+            _categoriasBL = new CategoriaBL();
         }
 
 
@@ -28,6 +30,10 @@ namespace InfinityStore.WebAdmin.Content
         public ActionResult Crear()
         {
             var nuevoProducto = new Producto();
+            var categorias = _categoriasBL.ObtenerCategorias();
+
+            ViewBag.ListaCategorias =
+                new SelectList(categorias, "Id", "Descripcion");
 
 
             return View(nuevoProducto);
