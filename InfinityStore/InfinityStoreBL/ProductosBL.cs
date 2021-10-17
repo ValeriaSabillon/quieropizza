@@ -23,9 +23,7 @@ namespace InfinityStore.BL
 
         public List<Producto> ObtenerProductos()
         {
-            ListadeProductos = _contexto.Productos 
-            .Include("Categoria")
-            .ToList();
+            ListadeProductos = _contexto.Productos.ToList();
 
             return ListadeProductos;
         }
