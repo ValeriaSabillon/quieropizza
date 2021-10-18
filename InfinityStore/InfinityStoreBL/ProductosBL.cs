@@ -45,6 +45,8 @@ namespace InfinityStore.BL
 
                 productoExistente.Precio = producto.Precio;
 
+                productoExistente.CategoriaId = producto.CategoriaId;
+
                 productoExistente.Existencia = producto.Existencia;
             }
 

@@ -32,7 +32,7 @@ namespace InfinityStore.WebAdmin.Content
             var nuevoProducto = new Producto();
             var categorias = _categoriasBL.ObtenerCategorias();
 
-            ViewBag.ListaCategorias = 
+            ViewBag.CategoriaId = 
                 new SelectList(categorias, "Id", "Descripcion");
 
 
