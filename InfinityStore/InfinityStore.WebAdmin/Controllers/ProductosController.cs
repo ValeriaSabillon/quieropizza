@@ -78,7 +78,7 @@ namespace InfinityStore.WebAdmin.Content
         }
 
         [HttpPost]
-        public ActionResult Editar(Producto producto)
+        public ActionResult Editar(Producto producto, HttpPostedFileBase imagen)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +86,10 @@ namespace InfinityStore.WebAdmin.Content
                 {
                     ModelState.AddModelError("CategoriaId", "Seleccione una categoria");
                     return View(producto);
+                }
+                if (imagen != null)
+                {
+                    producto.UrlImagen = GuardarImagen(imagen);
                 }
                 _productosBL.GuardarProducto(producto);
 
@@ -116,11 +120,9 @@ namespace InfinityStore.WebAdmin.Content
         }
 
         [HttpPost]
-
-        public ActionResult Eliminar (Producto producto)
+        public ActionResult Eliminar(Producto producto)
         {
             _productosBL.EliminarProducto(producto.Id);
-
 
             return RedirectToAction("Index");
         }

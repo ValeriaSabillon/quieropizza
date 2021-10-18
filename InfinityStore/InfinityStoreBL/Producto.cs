@@ -12,7 +12,7 @@ namespace InfinityStore.BL
     {
         public int Id { get; set; }
 
-        [Display(Name ="Descripcion")]
+        [Display(Name ="Descripción")]
         [Required(ErrorMessage ="Ingrese la descripcion")]
         [MinLength(3, ErrorMessage ="Ingrese minimo 3 caracteres")]
         [MaxLength(20,ErrorMessage ="Ingrese un maximo de 20 caracteres")]
