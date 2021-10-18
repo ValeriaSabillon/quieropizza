@@ -48,6 +48,8 @@ namespace InfinityStore.BL
                 productoExistente.CategoriaId = producto.CategoriaId;
 
                 productoExistente.Existencia = producto.Existencia;
+
+                productoExistente.UrlImagen = producto.UrlImagen;
             }
 
             _contexto.SaveChanges();
@@ -55,7 +57,9 @@ namespace InfinityStore.BL
 
         public Producto ObtenerProducto(int id)//funcion para mostrar el detalle
         {
-            var producto = _contexto.Productos.Find(id);
+            var producto = _contexto.Productos
+            .Include("Categoria").FirstOrDefault(p => p.Id == id);
+
             return producto;
         }
 
