@@ -12,7 +12,7 @@ namespace InfinityStore.BL
 {
     public class Contexto:DbContext
     {
-        public Contexto() : base("Server=.;Database=InfinityStorDB;Trusted_Connection=True;")
+        public Contexto() : base("Server=.;Database=InfinityStoreD;Trusted_Connection=True;")
         {
 
         }
